@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#nprogress {
+  pointer-events: none;
+  z-index: 100000;
+  position: relative;
+}
+
+#nprogress .bar {
+  background: theme('colors.primary.200');
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 99999;
+}
+
+html {
+  @apply bg-slate-100 scroll-smooth !overflow-x-hidden;
+}
+
+body {
+  @apply text-slate-600;
+}
+
+:root {
+  --sr-primary-color: theme('colors.primary.500');
+  --sr-home-color: theme('colors.green.500');
+  --sr-away-color: theme('colors.blue.500');
+  --sr-font-family: theme('fontFamily.sans');
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply !w-[42px] !h-[42px] !bg-white p-4 rounded-full shadow-xl z-[1000] overflow-hidden;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px !important;
+}
+
+/* .swiper-button-disabled {
+    @apply !hidden;
+  } */
+
+.react-date-picker__wrapper,
+.react-calendar {
+  @apply rounded !border-slate-200;
+}
+
+.react-date-picker__calendar {
+  @apply !z-[99999];
+}
+
+.react-calendar__tile--active {
+  @apply !bg-primary-500;
+}
