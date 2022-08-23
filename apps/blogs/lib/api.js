@@ -26,7 +26,6 @@ export async function getAllPostsWithSlug() {
     limit: 'all',
   }
   const posts = await api.posts.browse(params)
-  console.log(posts)
   return posts
 }
 
